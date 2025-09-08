@@ -44,31 +44,27 @@ let allPlantsCart = [];
 const loadCategory = () => {
   fetch("https://openapi.programming-hero.com/api/categories")
     .then((res) => res.json())
-    .then((data) => showLoadedcategory(data.categories))
-    .catch((err) => console.log(err));
+    .then((data) => showLoadedcategory(data.categories));
 };
 // Load plants by category
 const loadCategoriesplants = (id) => {
   const url = `https://openapi.programming-hero.com/api/category/${id}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => showPlantsByCategory(data.plants))
-    .catch((err) => console.log(err));
+    .then((data) => showPlantsByCategory(data.plants));
 };
 // load all plants
 const loadAllPlants = () => {
   fetch("https://openapi.programming-hero.com/api/plants")
     .then((res) => res.json())
-    .then((data) => showloadAllPlants(data.plants))
-    .catch((err) => console.log(err));
+    .then((data) => showloadAllPlants(data.plants));
 };
 // load Plant Details
 const loadPlantDetails = (id) => {
   const url = `https://openapi.programming-hero.com/api/plant/${id}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => showLoadPlantsDetails(data.plants))
-    .catch((err) => console.log(err));
+    .then((data) => showLoadPlantsDetails(data.plants));
 };
 // show Load Plants Details
 const showLoadPlantsDetails = (plants) => {
@@ -174,7 +170,6 @@ const handlePlantCart = (e) => {
   showPlantCarts(allPlantsCart);
 };
 const showPlantCarts = (plants) => {
-  console.log(plants);
   getIdName("cart-container").innerHTML = "";
   plants.forEach((plant) => {
     getIdName("cart-container").innerHTML += `

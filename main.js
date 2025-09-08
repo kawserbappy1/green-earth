@@ -19,6 +19,16 @@ document.querySelectorAll(".nav-link ").forEach((link) => {
 const getIdName = (id) => {
   return document.getElementById(id);
 };
+
+// Show Erro
+const showError = () => {
+  getIdName("plants-container").innerHTML = `
+    <div class="text-red-500 text-2xl text-center" >
+      <h1> No plant added in this Category</h1>
+    </div
+
+  `;
+};
 //LOADING SPINNER
 const showLoading = () => {
   getIdName("plants-container").innerHTML = `
@@ -51,7 +61,8 @@ const loadCategoriesplants = (id) => {
   const url = `https://openapi.programming-hero.com/api/category/${id}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => showPlantsByCategory(data.plants));
+    .then((data) => showPlantsByCategory(data.plants))
+    .catch((err) => showError());
 };
 // load all plants
 const loadAllPlants = () => {

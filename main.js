@@ -22,7 +22,7 @@ const getIdName = (id) => {
 //LOADING SPINNER
 const showLoading = () => {
   getIdName("plants-container").innerHTML = `
-                <span class="loading loading-spinner loading-xl bg-first-color w-28"></span>
+                <span class="loading loading-spinner loading-xl bg-[#15803D] w-12 md:w-18 lg:w-28"></span>
   `;
 };
 
@@ -76,14 +76,14 @@ const showLoadPlantsDetails = (plants) => {
   getIdName("modal-details-container").innerHTML = "";
   getIdName("modal-details-container").innerHTML += `
     <div  class="p-2">
-    <h2 class="text-3xl capitalize text-title-color font-bold">${plants.name}</h2>
+    <h2 class="text-3xl capitalize text-[#1F2937] font-bold">${plants.name}</h2>
     <img src="${plants.image}" alt="" class="py-2 h-[400px] w-full rounded-xl object-cover" />
-    <h3 class="capitalize text-xl"><span class="font-bold text-title-color">category : </span> ${plants.category}</h3>
+    <h3 class="capitalize text-xl"><span class="font-bold text-[#1F2937]">category : </span> ${plants.category}</h3>
     <h3 class="capitalize text-xl py-2">
-      <span class="font-bold text-title-color">price : </span> ৳ <span>${plants.price}</span>
+      <span class="font-bold text-[#1F2937]">price : </span> ৳ <span>${plants.price}</span>
     </h3>
     <p>
-      <span class="capitalize text-xl font-bold text-title-color">description : </span>
+      <span class="capitalize text-xl font-bold text-[#1F2937]">description : </span>
       ${plants.description}
     </p>
   </div>
@@ -97,15 +97,15 @@ const showloadAllPlants = (plants) => {
     getIdName("plants-container").innerHTML += `
                 <div id="${plant.id}" class="p-4 bg-white rounded-lg m-1 shadow-2xl xl:m-2 ">
                 <img src="${plant.image}" alt="" class="rounded-lg w-full  md:w-[310px] h-[190px] object-cover hover:scale-110 ease-in-out duration-700" />
-                <h3 onclick ="loadPlantDetails(${plant.id})"  class="text-xl text-title-color font-semibold py-2">${plant.name}</h3>
-                <p class="text-base text-text-color opacity-80">
+                <h3 onclick ="loadPlantDetails(${plant.id})"  class="text-xl text-[#1F2937] font-semibold py-2">${plant.name}</h3>
+                <p class="text-base text-[#1F2937] opacity-80">
                   ${plant.description}
                 </p>
                 <div class="flex items-center justify-between py-4">
-                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">${plant.category}</button>
-                  <h3 class="text-lg font-semibold text-title-color">৳ <span>${plant.price}</span></h3>
+                  <button class="btn bg-[#DCFCE7] text-xs text-[#15803D] capitalize rounded-full">${plant.category}</button>
+                  <h3 class="text-lg font-semibold text-[#1F2937]">৳ <span>${plant.price}</span></h3>
                 </div>
-                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+                <button class="btn w-full rounded-full bg-[#15803D] text-white">Add to Cart</button>
               </div>
     `;
   });
@@ -117,15 +117,15 @@ const showPlantsByCategory = (plants) => {
     getIdName("plants-container").innerHTML += `
                 <div id="${plant.id}" class="p-4 bg-white rounded-lg shadow-2xl m-1 xl:m-2 overflow-hidden">
                 <img src="${plant.image}" alt="" class="rounded-lg w-[310px] h-[190px] object-cover hover:scale-110 ease-in-out duration-700" />
-                <h3 onclick ="loadPlantDetails(${plant.id})" class="text-xl text-title-color font-semibold py-2">${plant.name}</h3>
-                <p class="text-base text-text-color opacity-80">
+                <h3 onclick ="loadPlantDetails(${plant.id})" class="text-xl text-[#1F2937] font-semibold py-2">${plant.name}</h3>
+                <p class="text-base text-[#1F2937] opacity-80">
                   ${plant.description}
                 </p>
                 <div class="flex items-center justify-between py-4">
-                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">${plant.category}</button>
-                  <h3 class="text-lg font-semibold text-title-color">৳ <span>${plant.price}</span></h3>
+                  <button class="btn bg-[#DCFCE7] text-xs text-[#15803D] capitalize rounded-full">${plant.category}</button>
+                  <h3 class="text-sm  md:text-lg font-semibold text-[#1F2937]">৳ <span>${plant.price}</span></h3>
                 </div>
-                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+                <button class="btn w-full rounded-full bg-[#15803D] text-white">Add to Cart</button>
               </div>
     `;
   });
@@ -135,7 +135,7 @@ const showLoadedcategory = (categories) => {
   categories.forEach((category) => {
     getIdName("category-container").innerHTML += `
               <li  onclick = "loadCategoriesplants(${category.id})"
-                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start" >
+                class="btn flex place-items-center cursor-pointer text-xs md:text-base text-[#1F2937] bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start" >
                 ${category.category_name}
               </li>
               
@@ -178,9 +178,9 @@ const showPlantCarts = (plants) => {
   getIdName("cart-container").innerHTML = "";
   plants.forEach((plant) => {
     getIdName("cart-container").innerHTML += `
-            <div class="flex items-center justify-between bg-bg-color1 p-1 rounded-lg mb-2">
+            <div class="flex items-center justify-between bg-[#F0FDF4] p-1 rounded-lg mb-2">
               <div>
-                <h3 class="text-xs font-bold text-title-color">${plant.plantName}</h3>
+                <h3 class="text-xs font-bold text-[#1F2937]">${plant.plantName}</h3>
                 <p class="py-1">৳ <span class="plant-price">${plant.plantPrice}</span></p>
               </div>
               <div>

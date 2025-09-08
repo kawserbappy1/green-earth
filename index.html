@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- five icon  -->
+    <link rel="shortcut icon" href="./assets/hero-leaf1.png" type="image/x-icon" />
+    <!-- title here  -->
+    <title>Plant a Tree || Grow a Future</title>
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind css file link  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custome css file link  -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- HEADER AREA START  -->
+    <header class="fixed top-0 left-0 w-full z-10 bg-[#15803D]">
+      <nav class="flex justify-between items-center h-20 px-2 md:px-6 lg:px-10 xl:px-34">
+        <!-- logo here  -->
+        <a href="">
+          <h2 class="text-2xl capitalize font-bold text-white">green earth</h2>
+        </a>
+        <!-- menu links  -->
+        <div
+          id="menu"
+          class="absolute top-0 left-[-100%] bg-[#15803D] w-full min-h-[80vh] px-5 duration-500 ease-out overflow-hidden z-20 md:static md:min-h-fit md:bg-transparent md:w-auto md:px-0"
+        >
+          <ul class="flex flex-col items-center gap-8 pt-20 md:flex-row md:pt-0">
+            <li>
+              <a href="#about" class="text-white hover:text-[#FACC15] ease-out duration-500 font-bold nav-link"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#gallery" class="text-white hover:text-[#FACC15] ease-out duration-500 font-bold nav-link"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#plant" class="text-white hover:text-[#FACC15] ease-out duration-500 font-bold nav-link"
+                >Plant a Tree</a
+              >
+            </li>
+          </ul>
+          <!-- close icon  -->
+          <div id="close-btn" class="text-2xl cursor-pointer absolute top-5 right-5 md:hidden">
+            <i class="fa-solid fa-xmark text-white"></i>
+          </div>
+        </div>
+
+        <!-- button area   -->
+        <button class="btn px-4 py-2 rounded-full bg-[#FACC15] border-0 text-[#15803D] md:px-5 md:py-3">
+          Plant a Tree
+        </button>
+        <!-- hambargar button  -->
+        <div id="mobile-menu" class="text-2xl cursor-pointer text-white md:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER AREA END -->
+    <main>
+      <!-- BANNER AREA START  -->
+      <section
+        class="relative bg-[#CFF0DC] pt-40 pb-24 md:pt-48 md:pb-36 px-2 md:px-6 lg:px-10 xl:px-34 overflow-hidden"
+      >
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-[#1F2937]">Plant a Tree, Grow a Future</h1>
+          <p class="text-base text-[#1F2937] opacity-80 py-4 max-w-lg mx-auto">
+            Join our mission to plant 1 million trees and make the Earth greener for future generations.
+          </p>
+          <button class="btn px-4 py-2 rounded-full bg-[#FACC15] text-[#15803D] md:px-5 md:py-3">Get Involved</button>
+        </div>
+        <img
+          src="./assets/hero-leaf1.png"
+          alt=""
+          class="hidden w-40 md:w-72 lg:w-90 xl:w-1/4 md:block absolute left-0 bottom-0 -rotate-10"
+        />
+        <img
+          src="./assets/hero-leaf2.png"
+          alt=""
+          class="hidden w-40 md:w-72 lg:w-90 xl:w-1/4 md:block absolute right-0 bottom-0 rotate-10"
+        />
+      </section>
+      <!-- BANNER AREA END  -->
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

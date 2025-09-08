@@ -115,7 +115,7 @@
             <ul id="category-container" class="flex gap-1 text-center justify-center flex-wrap">
               <li
                 onclick="loadAllPlants()"
-                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+                class="btn flex place-items-center cursor-pointer text-base text-[#1F2937] bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
               >
                 All Trees
               </li>
@@ -125,7 +125,7 @@
           <article class="col-span-8 lg:col-span-8 flex justify-center">
             <div id="plants-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
               <!-- tree card div  -->
-              <span class="loading loading-spinner loading-xl bg-[#15803D] w-28"></span>
+              <span class="loading loading-spinner loading-xl bg-[#15803D] w-12 md:w-18 lg:w-28"></span>
             </div>
           </article>
 
@@ -167,7 +167,59 @@
         </div>
       </section>
       <!-- ABOUT SECTION END  -->
+
+      <!-- IMPACE SECTION AREA START  -->
+      <section class="py-10 px-2 md:py-16 lg:py-20 md:px-6 lg:px-10 xl:px-34 bg-[#CFF0DC]">
+        <h2 class="text-center text-3xl text-[#1F2937] font-semibold mb-4">Our Impact</h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-12">
+          <div class="bg-white flex flex-col items-center justify-center py-10 rounded-lg">
+            <h2 class="text-3xl font-semibold text-[#15803D] mb-2">500K+</h2>
+            <p class="text-base text-[#1F2937] opacity-80">Trees Planted</p>
+          </div>
+          <div class="bg-white flex flex-col items-center justify-center py-10 rounded-lg">
+            <h2 class="text-3xl font-semibold text-[#15803D] mb-2">120+</h2>
+            <p class="text-base text-[#1F2937] opacity-80">Communities Involved</p>
+          </div>
+          <div class="bg-white flex flex-col items-center justify-center py-10 rounded-lg">
+            <h2 class="text-3xl font-semibold text-[#15803D] mb-2">30+</h2>
+            <p class="text-base text-[#1F2937] opacity-80">Countries Reached</p>
+          </div>
+        </div>
+      </section>
+      <!-- IMPACE SECTION AREA END  -->
+      <!-- NEWSLETTER SECTION START  -->
+      <section class="py-10 px-2 md:py-16 lg:py-20 md:px-6 lg:px-10 xl:px-34 bg-[#166534]">
+        <h2 class="text-center text-3xl text-white font-semibold">Plant a Tree Today</h2>
+        <div class="max-w-[635px] mx-auto flex items-center justify-center mt-8">
+          <div class="p-8 bg-first-color shadow-[0_4px_22px_rgba(0,0,0,0.6)] rounded-lg">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="input w-full focus:outline-none h-[48px] mb-3 p-2 placeholder:text-[#1F2937] placeholder:opacity-50 placeholder:text-base"
+            />
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="input w-full focus:outline-none h-[48px] mb-3 p-2 placeholder:text-[#1F2937] placeholder:opacity-50 placeholder:text-base"
+            />
+            <select
+              class="select select-md w-full input focus:outline-none h-[48px] mb-3 p-2 placeholder:text-[#1F2937] placeholder:opacity-50 placeholder:text-base"
+            >
+              <option selected>Number of Trees</option>
+              <option>1 tree - $5</option>
+              <option>5 trees - $25</option>
+              <option>10 trees - $50</option>
+            </select>
+            <button class="btn w-full rounded-full bg-second-color text-[#15803D] border-0 py-3">Donate Now</button>
+          </div>
+        </div>
+      </section>
+      <!-- NEWSLETTER SECTION END  -->
     </main>
+    <footer class="bg-[#14532D] flex justify-center items-center py-10">
+      <p class="text-base text-white">© 2025 Green Earth. All Rights Reserved.</p>
+    </footer>
+    <!-- FOOTER AREA END  -->
     <script src="./main.js"></script>
   </body>
 </html>

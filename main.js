@@ -200,7 +200,7 @@ const showPlantCarts = (plants) => {
 };
 const handleCartDelete = (plantsId) => {
   const filterdCartItem = allPlantsCart.filter((plantEle) => plantEle.plantId !== plantsId);
-  console.log(filterdCartItem);
+
   allPlantsCart = filterdCartItem;
   showPlantCarts(allPlantsCart);
   updateTotal();
